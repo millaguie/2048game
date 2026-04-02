@@ -1,0 +1,10 @@
+{
+  "esversion": 8,
+  "browser": true,
+  "undef": true,
+  "unused": false,
+  "loopfunc": true,
+  "globals": {
+    "ParticleCanvas": true
+  }
+}
