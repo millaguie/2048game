@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>2048</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">2048</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <div class="score-label">SCORE</div>
+                    <div id="current-score" class="score-value">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">BEST</div>
+                    <div id="best-score" class="score-value">0</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="controls">
+            <div class="grid-size-selector">
+                <button class="size-btn active" data-size="4">4×4</button>
+                <button class="size-btn" data-size="5">5×5</button>
+                <button class="size-btn" data-size="6">6×6</button>
+            </div>
+            <button id="new-game-btn" class="new-game-btn">New Game</button>
+        </div>
+
+        <div class="board-wrapper">
+            <div id="game-board" class="game-board" data-size="4"></div>
+            <div id="game-overlay" class="game-overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="overlay-title"></h2>
+                    <button id="overlay-retry" class="new-game-btn">Try Again</button>
+                </div>
+            </div>
+        </div>
+
+        <p class="instructions">Use <strong>arrow keys</strong> or <strong>WASD</strong> to move. Swipe on mobile. Merge tiles to reach <strong>2048</strong>!</p>
+    </div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <script src="animations.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
