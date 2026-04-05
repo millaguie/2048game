@@ -16,7 +16,26 @@ A browser-based 2048 clone with spectacular explosion animations on every tile m
 
 Open `src/index.html` in any browser. No build step required.
 
-## Run with Docker
+## Docker Image
+
+The image is published to GitHub Container Registry on every push to `main`:
+
+```
+ghcr.io/millaguie/2048game
+```
+
+Available tags:
+- `latest` — latest build from `main`
+- `sha-<commit>` — pinned to a specific commit (e.g. `sha-91e15a5`)
+
+Pull and run:
+
+```bash
+docker pull ghcr.io/millaguie/2048game:latest
+docker run -p 8080:80 ghcr.io/millaguie/2048game:latest
+```
+
+## Run with Docker Compose
 
 ```bash
 docker compose up
@@ -24,7 +43,7 @@ docker compose up
 
 Open [http://localhost:8080](http://localhost:8080).
 
-## Run with Docker (manual build)
+## Build Locally
 
 ```bash
 docker build -t 2048 .
