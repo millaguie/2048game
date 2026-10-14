@@ -81,7 +81,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Set up Helm
-        uses: azure/setup-helm@v4
+        uses: azure/setup-helm@v5
       - name: Helm lint
         run: helm lint charts/2048
       - name: Helm template
